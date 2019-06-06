@@ -1,0 +1,8 @@
+#NodeJs
+node_modules/
+
+#JetBrains
+.idea/
+
+#Build
+dist/
