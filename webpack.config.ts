@@ -23,12 +23,15 @@ const config: Configuration = {
         }]
     },
     plugins: [
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            template: "template.html"
+        })
     ],
     devtool: "inline-source-map",
     devServer: {
         port: 8080,
-        host: "0.0.0.0"
+        host: "0.0.0.0",
+        https: true
     }
 };
 

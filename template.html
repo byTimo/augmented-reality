@@ -1,0 +1,44 @@
+<!doctype HTML>
+<!--<html>-->
+<!--<head>-->
+<!--    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">-->
+<!--</head>-->
+<!--<script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>-->
+<!--<script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>-->
+<!--<body style='margin : 0px; overflow: hidden;'>-->
+<!--<a-scene embedded arjs>-->
+<!--    <a-marker preset="hiro">-->
+<!--&lt;!&ndash;        <a-box position='0 0.5 0' material='color: yellow;'></a-box>&ndash;&gt;-->
+<!--        <a-entity-->
+<!--                obj-model="obj: url(/assets/model.obj) mtl: url(/assets/materials.mtl)"-->
+<!--        >-->
+
+<!--        </a-entity>-->
+<!--    </a-marker>-->
+<!--    <a-entity camera></a-entity>-->
+<!--</a-scene>-->
+<!--</body>-->
+<!--</html>-->
+
+<html>
+<head>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+</head>
+<body>
+<a-scene stats>
+    <a-assets>
+        <a-asset-item id="test-obj" src="assets/model.obj"></a-asset-item>
+        <a-asset-item id="test-mtl" src="assets/materials.mtl"></a-asset-item>
+        <a-asset-item id="totoro-obj" src="assets/totoronico.obj"></a-asset-item>
+        <a-asset-item id="totoro-mtl" src="assets/totoronico.mtl"></a-asset-item>
+    </a-assets>
+
+    <a-entity
+            obj-model="obj: #totoro-obj; mtl: #totoro-mtl"
+            position="0 0 -5"
+            scale="0.1 0.1 0.1"
+    ></a-entity>
+    <a-sky color="blue"></a-sky>
+</a-scene>
+</body>
+</html>
